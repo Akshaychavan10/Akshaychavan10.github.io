@@ -24,7 +24,7 @@ timezone: Asia/Kolkata
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Cyber7ron                          # the main title
+title: Portfolio                          # the main title
 
 tagline: Blog dedicated to cyber security articles and writeups.   # it will display as the sub-title
 
@@ -35,7 +35,7 @@ description: >-                        # used by seo meta and the atom feed
 url: 'https://cyber7ron.github.io'
 
 github:
-  username: cyber7ron             # change to your github username
+  username: Akshaychavan10             # change to your github username
 
 twitter:
   username: icyber7ron
@@ -44,7 +44,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: cyber7ron
+  name: Akshay Chavan
   email: akschavan100@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
