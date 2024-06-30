@@ -1,6 +1,6 @@
 ---
 title: 2. Intro to Defensive Security
-date: 2023-12-29 11:11:11 +/-TTTT
+date: 2023-12-27 11:11:11 +/-TTTT
 categories: [Notes, Pre Security]
 tags: [Defensive Security ]
 ---
