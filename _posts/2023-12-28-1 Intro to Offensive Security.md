@@ -5,12 +5,6 @@ categories: [Notes, Pre Security]
 tags: [offensive Security ]
 ---
 
-|Machine Name | Date | Level | Type |
-|-------------|-------|------|------|
-| note template | 2023-12-28 | Hard | Notes |
-
-
-
 
 **What is Offensive Security:** 
 
