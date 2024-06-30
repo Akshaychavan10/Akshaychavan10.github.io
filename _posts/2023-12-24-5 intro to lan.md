@@ -1,6 +1,6 @@
 ---
 title: 5. Intro to LAN 
-date: 2024-12-24 11.11.11 +/-TTTT
+date: 2023-12-24 11.11.11 +/-TTTT
 categories: [Notes, Pre Security]
 tags: [star, bus, ring, switch,router, subnetting, arp, dhcp]     # TAG names should always be lowercase
 img_path: /assets/img/notes/

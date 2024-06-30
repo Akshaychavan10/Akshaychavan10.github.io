@@ -1,6 +1,6 @@
 ---
 title: 3. Careers in Cyber
-date: 2024-12-26 11:11:11 +/-TTTT
+date: 2023-12-26 11:11:11 +/-TTTT
 categories: [Notes, Pre Security]
 tags: [job roles ]
 ---
