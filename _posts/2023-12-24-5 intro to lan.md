@@ -23,7 +23,7 @@ img_path: /assets/img/notes/
 
 ### Bus Topology
 
-![[Pasted image 20240504161831.png]]
+![img](bus_topology.png)
 
 - **Description**: Devices connect to a single backbone cable.
 - **Advantages**:
@@ -35,7 +35,7 @@ img_path: /assets/img/notes/
 
 ### Ring Topology
 
-![[Pasted image 20240504161929.png]]
+![img](ring_topology.png)
 
 - **Description**: Devices connect in a loop with each device directly linked to its neighbors.
 - **Advantages**:
@@ -47,7 +47,7 @@ img_path: /assets/img/notes/
     - Entire network breaks if there's a fault like a cut cable or broken device.
 ### What is Switch
 
-![[Pasted image 20240504161946.png]]
+![img](switch.png)
 - **Description**: Switches are dedicated devices in a network that aggregate multiple devices like computers and printers using Ethernet. Devices connect to switch ports.
 - **Functionality**:
     - Efficiently routes packets to intended targets, reducing network traffic compared to hubs/repeaters.
@@ -61,7 +61,7 @@ img_path: /assets/img/notes/
 
 ### What is Router
 
-![[Pasted image 20240504161955.png]]
+![img](router.png)
 - **Description**: Routers connect networks and facilitate data transfer between them.
 - **Functionality**:
     - Utilizes routing to establish paths for data across networks.
@@ -70,8 +70,6 @@ img_path: /assets/img/notes/
     - Essential component in network infrastructure, enabling communication between disparate networks.
 - **Routing**:
     - Process of directing data packets across networks to reach their intended destinations.
-
-
 
 ## Subnetting
 
@@ -162,13 +160,14 @@ Subnetting into smaller networks
 | 2`^6`        | = 64      |
 | 2`^7`        | = 128     |
 | 2`^8`        | = 256     |
+
 ## ARP
 
 - Address Resolution Protocol
 - Maps Host IP address to its corresponding MAC address to facilitate communication between devices on Local Area Network(lan).
 1. **ARP Request**: When a device in a network wants to communicate with another device but only knows its IP address, it sends out an ARP request to find the MAC (Media Access Control) address associated with that IP address. The ARP request is broadcasted to all devices on the local network. It contains the IP address of the target device that the sender wants to communicate with.
 2. **ARP Response**: When the device with the requested IP address receives the ARP request, it responds with an ARP reply. This reply contains its MAC address. The ARP reply is unicast, meaning it is sent directly back to the device that sent the ARP request. Once the requester receives this ARP reply, it can use the MAC address to communicate directly with the target device.
-![[Pasted image 20240504163306.png]]
+![img](arp_req_res.png)
 **ARP Resolution** :  
 when device on LAN wants to communicate with another device, it send a broadcast message containing the destination IP address and its own mac address.
 
@@ -189,4 +188,4 @@ The DHCP (Dynamic Host Configuration Protocol) is a network management protocol 
     
 4. **DHCP Acknowledgment**: Finally, the DHCP server sends a DHCP acknowledgment message to the client, confirming that the lease has been granted. The client can then use the assigned IP address and network configuration.
 
-![[Pasted image 20240504163413.png]]
+![img](dhcp_proto.png)
