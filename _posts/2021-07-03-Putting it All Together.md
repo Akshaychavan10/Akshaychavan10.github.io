@@ -1,7 +1,7 @@
 ---
 title: Putting it All Together
 date: 2021-07-03 11.11.11 +/-TTTT
-categories: [Tryhackme, Pre Security]
+categories: [Notes, Pre Security]
 tags: [server,cdn,load balancer,vhost]     # TAG names should always be lowercase
 img_path: /img/path/
 ---
