@@ -10,7 +10,7 @@ img_path: /assets/img/notes/
 
 ### Star topology
 
-![[Pasted image 20240504161906.png]]
+![img](start_topology.png)
 - **Description**: Devices connect individually to a central networking device like a switch or hub.
 - **Advantages**:
     - Reliable and scalable despite higher cost.
