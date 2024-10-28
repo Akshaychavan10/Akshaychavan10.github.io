@@ -13,8 +13,8 @@ An eager professional and a constant learner into security domain. Got appreciat
 
 | | | 
 |:--------------:|:------------:|
-|<img src="/assets/img/cert/pre_security.png"> | <img src="/assets/img/cert/jr_pentester.png">|
-|<img src="/assets/img/cert/comptia.png">| <img src="/assets/img/cert/complete_beginer.png">|
-|<img src="/assets/img/cert/web_fundamental.png"> | 
+|<img src="/assets/img/cert/pre_security.png" alt="test"> | <img src="/assets/img/cert/jr_pentester.png" alt="test">|
+|<img src="/assets/img/cert/comptia.png " alt="test">| <img src="/assets/img/cert/complete_beginer.png" alt="test">|
+|<img src="/assets/img/cert/web_fundamental.png" alt="test"> | 
 
 
