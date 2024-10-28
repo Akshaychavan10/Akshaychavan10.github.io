@@ -1,6 +1,6 @@
 ---
 title: 1. Introduction to Offensive Security
-date: 2024-10-15 11:11:11 +/-TTTT
+date: 2023-10-15 11:11:11 +/-TTTT
 categories: [Notes, Pre Security]
 tags: [offsec] 
 author: 1  
