@@ -1,7 +1,7 @@
 ---
-title: 2. Intro to Defensive Security
+title: 2 Intro to Defensive Security
 date: 2023-10-14 11:11:11 +/-TTTT
-categories: [Notes, Pre Security]
+categories: [Notes, PreSecurity]
 tags: [blueteam] 
 author: 1  
 description: Defensive Security: A comprehensive guide to protecting systems from threats, including prevention, detection, response, and recovery.   

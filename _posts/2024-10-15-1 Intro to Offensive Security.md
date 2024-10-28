@@ -1,7 +1,7 @@
 ---
 title: 1. Introduction to Offensive Security
 date: 2023-10-15 11:11:11 +/-TTTT
-categories: [Notes, Pre Security]
+categories: [Notes, PreSecurity]
 tags: [offsec] 
 author: 1  
 description: Discover the world of offensive security, learn how to break into systems,and explore potential career paths in cybersecurity.   
