@@ -4,7 +4,7 @@ date: 2023-10-14 11:11:11 +/-TTTT
 categories: [Notes, PreSecurity]
 tags: [blueteam] 
 author: 1  
-description: Defensive Security: A comprehensive guide to protecting systems from threats, including prevention, detection, response, and recovery.   
+description: A comprehensive guide on Defensive Security to protecting systems from threats, including prevention, detection, response, and recovery.   
 ---
 
 ## Intro to Defensive Security:
@@ -139,5 +139,3 @@ Malware analysis involves studying these malicious programs using various method
 
 
 
-
-goodbye !!!
