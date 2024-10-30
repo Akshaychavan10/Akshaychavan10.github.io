@@ -70,8 +70,6 @@ description: in-depth look at data transmission across networks, explaining the 
 5. **FIN** — used to *cleanly* close a connection between a client and server when work is complete.
 6. **RST** — Abruptly end communication (an interrupt signal), is used as a last resort and signifies an issue such as inappropriate resource expenditure or a service/application error.
 
-### test
-
 ## UDP/IP
 
 ### User Datagram Protocol (UDP)

@@ -1,6 +1,6 @@
 ---
 title: 4 What is Networking
-date: 2023-10-13 11:11:11 +/-TTTT
+date: 2023-10-13 11:06:11 +/-TTTT
 categories: [Notes, PreSecurity]
 tags: [ipv4, subnet mask, internet] 
 author: 1  

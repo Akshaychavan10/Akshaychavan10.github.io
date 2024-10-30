@@ -20,9 +20,13 @@ DNS translates human-readable domain names into numerical IP addresses, making i
 **Benefits of DNS:**
 - Allows users to access online resources using easy-to-remember domain names.
 - Simplifies communication on the internet by eliminating the need to memorize complex IP addresses.
+
 ## Domain Hierarchy
+
 ### TLD (Top-Level Domain)
+
 - TLD is the last part of a domain name (e.g., .com in tryhackme.com)
+
 ### Types of TLDs
 
 **gTLD (Generic Top Level):** Indicates the purpose of the domain (e.g., .com for commercial, .org for organization)
@@ -41,8 +45,12 @@ DNS translates human-readable domain names into numerical IP addresses, making i
 - Can be used in combination with periods to create longer names (e.g., jupiter.servers.tryhackme.com)
 - Total length must be 253 characters or less
 - No limit on the number of subdomains that can be created
+
 ## Record Types
-DNS isn’t just for websites though, and multiple types of DNS record exist. We’ll go over some of the most common ones that you’re likely to come across.**A Record** : These records resolve to IPv4 addresses, for example 104.26.10.229
+
+DNS isn’t just for websites though, and multiple types of DNS record exist. We’ll go over some of the most common ones that you’re likely to come across.
+
+**A Record** : These records resolve to IPv4 addresses, for example 104.26.10.229
 
 **AAAA Record** : These records resolve to IPv6 addresses, for example 2606:4700:20::681a:be5
 

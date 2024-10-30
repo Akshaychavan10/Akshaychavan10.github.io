@@ -22,6 +22,7 @@ description: Other Componenet of website.
 ### CDN
 - It allows you to host static files from your website, such a JavaScript, CSS, Images, Videos, and host them across thousands of servers all over the world.
 - When a user requests one of the hosted files, the CDN works out where the nearest server is physically located and sends the request there instead of potentially the other side of the world.
+
 ### WAF
 A WAF sits between your web request and the web server; its primary purpose is to protect the webserver from hacking or denial of service attacks. It analyses the web requests for common attack techniques, whether the request is from a real browser rather than a bot.
 
@@ -29,7 +30,7 @@ A WAF sits between your web request and the web server; its primary purpose is t
 
 - A web server is software that listens for incoming connections and delivers web content using the HTTP protocol.
 - Common web server software includes Apache, Nginx, IIS, and NodeJS. Web servers serve files from a root directory defined in their settings.
-- For example, Nginx and Apache use /var/www/html in Linux, while IIS uses C:in Windows. When a file like http://www.example.com/picture.jpg is requested, the web server sends the corresponding file from its root directory.
+- For example, Nginx and Apache use `/var/www/html` in Linux, while IIS uses `C:in Windows`. When a file like `http://www.example.com/picture.jpg` is requested, the web server sends the corresponding file from its root directory.
 
 ### Virtual Host
 
