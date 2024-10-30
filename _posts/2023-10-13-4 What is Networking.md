@@ -2,9 +2,9 @@
 title: 4 What is Networking
 date: 2023-10-13 11:11:11 +/-TTTT
 categories: [Notes, PreSecurity]
-tags: [blueteam] 
+tags: [ipv4, subnet mask, internet] 
 author: 1  
-description: Networking: Connecting devices for communication and data exchange.  
+description: Networking - Connecting devices for communication and data exchange.  
 ---
 
 ## What is Networking
