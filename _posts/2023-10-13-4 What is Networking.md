@@ -67,7 +67,7 @@ The IP network blocks were divided into `classes A - E`. The different classes 
 - 32-bit number used in conjection with ip address to identify the `network part` and `host part` of the address.
 - For example, the subnet mask "255.255.255.0" (often expressed in shorthand notation as "/24") has the first 24 bits set to 1, indicating that the first 24 bits of the IP address represent the network portion, and the remaining 8 bits represent the host portion.
 - When an IP address and subnet mask are bitwise ANDed together, the result determines the network address.
-    - For example, consider the IP address 192.168.1.100 with a subnet mask of 255.255.255.0. In binary, the subnet mask would be 11111111.11111111.11111111.00000000. When bitwise ANDed with the IP address (11000000.10101000.00000001.01100100), the result (11000000.10101000.00000001.00000000) gives us the network address (192.168.1.0).
+    - For example, consider the IP address `192.168.1.100` with a subnet mask of `255.255.255.0` In binary, the subnet mask would be `11111111.11111111.11111111.00000000` When bitwise ANDed with the IP address (`11000000.10101000.00000001.01100100`), the result (`11000000.10101000.00000001.00000000`) gives us the network address (`192.168.1.0`).
 
 ## Ping
 

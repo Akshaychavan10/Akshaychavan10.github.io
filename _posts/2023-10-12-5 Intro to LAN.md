@@ -11,7 +11,7 @@ description: overview of network topologies, key networking devices, and protoco
 
 ### Star topology
 
-![Pasted image 20240504161906.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/5dc4bbbf-c451-4867-bb65-aaa428ba5393/Pasted_image_20240504161906.png)
+![20240504161906.png](/assets/img/notes/presecurity/star.png)
 
 - **Description**: Devices connect individually to a central networking device like a switch or hub.
 - **Advantages**:
@@ -25,7 +25,7 @@ description: overview of network topologies, key networking devices, and protoco
 
 ### Bus Topology
 
-![Pasted image 20240504161831.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/68adab5e-75f1-45ff-8bbc-8efda547d72c/Pasted_image_20240504161831.png)
+![Pasted image 20240504161831.png](/assets/img/notes/presecurity/bus.png)
 
 - **Description**: Devices connect to a single backbone cable.
 - **Advantages**:
@@ -37,7 +37,7 @@ description: overview of network topologies, key networking devices, and protoco
 
 ### Ring Topology
 
-![Pasted image 20240504161929.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/45dcaad4-6b92-45af-b7b5-4721517d39ff/Pasted_image_20240504161929.png)
+![Pasted image 20240504161929.png](/assets/img/notes/presecurity/ring.png)
 
 - **Description**: Devices connect in a loop with each device directly linked to its neighbors.
 - **Advantages**:
@@ -50,7 +50,7 @@ description: overview of network topologies, key networking devices, and protoco
 
 ### What is Switch
 
-![Pasted image 20240504161946.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/50774b8c-5550-4747-a055-58103d5659ba/Pasted_image_20240504161946.png)
+![Pasted image 20240504161946.png](/assets/img/notes/presecurity/switch.png)
 
 - **Description**: Switches are dedicated devices in a network that aggregate multiple devices like computers and printers using Ethernet. Devices connect to switch ports.
 - **Functionality**:
@@ -65,7 +65,7 @@ description: overview of network topologies, key networking devices, and protoco
 
 ### What is Router
 
-![Pasted image 20240504161955.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/a7e2a6e1-f549-4f31-8a3a-608bddf6eb34/Pasted_image_20240504161955.png)
+![Pasted image 20240504161955.png](/assets/img/notes/presecurity/router.png)
 
 - **Description**: Routers connect networks and facilitate data transfer between them.
 - **Functionality**:
@@ -83,8 +83,8 @@ description: overview of network topologies, key networking devices, and protoco
 
 | CIDR | SUBNETTING |
 | --- | --- |
-| - Think of CIDR as a blueprint or map that outlines the boundaries of your entire piece of land. It tells you the total size of your land and how it's divided into different sections.. | - Subnetting, on the other hand, is like taking your large piece of land and dividing it into smaller plots for specific purposes. It's about breaking down your overall network space into smaller, more manageable sections. |
-| - For example, if your land is 100 acres in total, CIDR would tell you that your land is "100 acres" in size. This is similar to CIDR notation like "192.168.1.0/24", which tells you the total address range available and how it's divided into network and host portions | - For example, let's say you decide to divide your 100-acre land into smaller plots of 10 acres each. Each 10-acre plot represents a subnet. You might use one plot for building houses, another for farming, and so on. |
+| Think of CIDR as a blueprint or map that outlines the boundaries of your entire piece of land. It tells you the total size of your land and how it's divided into different sections.. | Subnetting, on the other hand, is like taking your large piece of land and dividing it into smaller plots for specific purposes. It's about breaking down your overall network space into smaller, more manageable sections. |
+| For example, if your land is 100 acres in total, CIDR would tell you that your land is "100 acres" in size. This is similar to CIDR notation like "192.168.1.0/24", which tells you the total address range available and how it's divided into network and host portions | For example, let's say you decide to divide your 100-acre land into smaller plots of 10 acres each. Each 10-acre plot represents a subnet. You might use one plot for building houses, another for farming, and so on. |
 
 **Lets take example and understand how subnetting works**
 
@@ -130,11 +130,13 @@ description: overview of network topologies, key networking devices, and protoco
 
 ```
 
-| **Details of** | **1st Octet** | **2nd Octet** | **3rd Octet** | **4th Octet** | **Decimal** |
-| --- | --- | --- | --- | --- | --- |
-| IPv4 | 1100 0000 | 1010 1000 | 0000 1100 | 10`\\\|11 1111` | `192.168.12.191`/26 |
-| Subnet mask | `1111 1111` | `1111 1111` | `1111 1111` | `11\\\|`00 0000 | 255.255.255.192 |
-| Bits | /8 | /16 | /24 | /32 |  |
+| Details       | 1st Octet   | 2nd Octet   | 3rd Octet   | 4th Octet   | Decimal           |
+|---------------|-------------|-------------|-------------|-------------|-------------------|
+| IPv4          | 1100 0000   | 1010 1000   | 0000 1100   | 10\|11 1111 | 192.168.12.191/26 |
+| Subnet mask   | 1111 1111   | 1111 1111   | 1111 1111   | 11\|00 0000 | 255.255.255.192   |
+| Bits          | /8          | /16         | /24         | /32         |                   |
+
+
 - **How to calculate available addresses in subnet** :
     - identify the subnet mask and covert it to binary.
     - count the number of host bits. (count the number of consecutive 0's after the last 1. this gives you the number of host bits.)
@@ -145,9 +147,7 @@ description: overview of network topologies, key networking devices, and protoco
 | --- | --- | --- | --- |
 | /8 | /16 | /24 | /32 |
 
-### 
-
-Subnetting into smaller networks
+### Subnetting into smaller networks
 
 - we can only divide the subnets on the binary system.
 
@@ -168,7 +168,7 @@ Subnetting into smaller networks
 - Address Resolution Protocol
 - Maps Host IP address to its corresponding MAC address to facilitate communication between devices on Local Area Network(lan).
 
-![Pasted image 20240504163306.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/ea49427c-bf81-4e88-a410-eb74972211e5/Pasted_image_20240504163306.png)
+![Pasted image 20240504163306.png](/assets/img/notes/presecurity/arp.png)
 
 1. **ARP Request**: When a device in a network wants to communicate with another device but only knows its IP address, it sends out an ARP request to find the MAC (Media Access Control) address associated with that IP address. The ARP request is broadcasted to all devices on the local network. It contains the IP address of the target device that the sender wants to communicate with.
 1. **ARP Response**: When the device with the requested IP address receives the ARP request, it responds with an ARP reply. This reply contains its MAC address. The ARP reply is unicast, meaning it is sent directly back to the device that sent the ARP request. Once the requester receives this ARP reply, it can use the MAC address to communicate directly with the target device.
@@ -189,4 +189,4 @@ The DHCP (Dynamic Host Configuration Protocol) is a network management protocol 
 3. **DHCP Request**: The client selects one of the DHCP offers it receives and responds with a DHCP request message, confirming the lease for the offered IP address and configuration.
 4. **DHCP Acknowledgment**: Finally, the DHCP server sends a DHCP acknowledgment message to the client, confirming that the lease has been granted. The client can then use the assigned IP address and network configuration.
 
-![Pasted image 20240504163413.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/00dbba5f-edb6-4320-b190-3be0a0e94c31/f1555c02-b2f9-4bb6-9d58-dc2727d50cde/Pasted_image_20240504163413.png)
+![Pasted image 20240504163413.png](/assets/img/notes/presecurity/dhcp.png)
