@@ -12,17 +12,18 @@ description: detailed guide on various functionalities and tools available in Li
 
 Here is a list that will help us to better understand and deal with user management.
 
-| **Command** | **Description**                                                                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sudo`      | Execute command as a different user.                                                                                                                       |
-| `su`        | The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed. |
-| `useradd`   | Creates a new user or update default new user information.                                                                                                 |
-| `userdel`   | Deletes a user account and related files.                                                                                                                  |
-| `usermod`   | Modifies a user account.                                                                                                                                   |
-| `addgroup`  | Adds a group to the system.                                                                                                                                |
-| `delgroup`  | Removes a group from the system.                                                                                                                           |
-| `passwd`    | Changes user password.                                                                                                                                     |
-***
+| **Command** | **Description**                                                                                                                                             |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `sudo`      | Execute command as a different user.                                                                                                                        |
+| `su`        | The `su` utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed. |
+| `useradd`   | Creates a new user or update default new user information.                                                                                                  |
+| `userdel`   | Deletes a user account and related files.                                                                                                                   |
+| `usermod`   | Modifies a user account.                                                                                                                                    |
+| `addgroup`  | Adds a group to the system.                                                                                                                                 |
+| `delgroup`  | Removes a group from the system.                                                                                                                            |
+| `passwd`    | Changes user password.                                                                                                                                      |
+
+
 ***
 ## Package Management
 - Packages are archives that contain binaries of software, configuration files, information about dependencies and keep track of updates and upgrades.
@@ -36,15 +37,17 @@ Here is a list that will help us to better understand and deal with user managem
 
 - package management programs.
 
-| **Command** | **Description**                                                                                                                                                                                                                                                                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dpkg`      | The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude.                                                                                                                                                                                                        |
-| `apt`       | Apt provides a high-level command-line interface for the package management system.                                                                                                                                                                                                                                                                     |
-| `aptitude`  | Aptitude is an alternative to apt and is a high-level interface to the package manager.                                                                                                                                                                                                                                                                 |
-| `snap`      | Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things.                                                                                                                                                              |
-| `gem`       | Gem is the front-end to RubyGems, the standard package manager for Ruby.                                                                                                                                                                                                                                                                                |
+| **Command** | **Description** |
+|-------------|-----------------|
+| `dpkg`      | The `dpkg` is a tool to install, build, remove, and manage Debian packages. The primary and more user-friendly front-end for `dpkg` is aptitude. |
+| `apt`       | Apt provides a high-level command-line interface for the package management system. |
+| `aptitude`  | Aptitude is an alternative to apt and is a high-level interface to the package manager. |
+| `snap`      | Install, configure, refresh, and remove snap packages. Snaps enable the secure distribution of the latest apps and utilities for the cloud, servers, desktops, and the internet of things. |
+| `gem`       | Gem is the front-end to RubyGems, the standard package manager for Ruby. |
 | `pip`       | Pip is a Python package installer recommended for installing Python packages that are not available in the Debian archive. It can work with version control repositories (currently only Git, Mercurial, and Bazaar repositories), logs output extensively, and prevents partial installs by downloading all requirements before starting installation. |
-| `git`       | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.                                                                                                                                                                                  |
+| `git`       | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. |
+
+
 #### Advanced package manager (APT)
 
 - Debian-based Linux Distributions use the APT package manager.
@@ -106,6 +109,8 @@ journalctl -U ssh.service --no-pager
 |`15`|`SIGTERM` - Program termination.|
 |`19`|`SIGSTOP` - Stop the program. It cannot be handled anymore.|
 |`20`|`SIGTSTP` - Sent when a user presses `[Ctrl] + Z` to request for a service to suspend. The user can handle it afterward.|
+
+
 ```
 kill 9 <PID>
 ```
@@ -152,26 +157,28 @@ ls: cannot access 'MISSING_FILE': No such file or directory
 
 - its service used in linux system to start processes and scripts at a specific time. to do so we need 
 	1. Create a timer
-	 2. Create a service 
-	 3. Activate the timer
+	2. Create a service 
+	3. Activate the timer
 
 **1. Create a timer** :
- 1. create a directory where the timer script will be stored.
+
+1. create a directory where the timer script will be stored.
 
 ```shell-session
 cyber7ron@htb[/htb]$ sudo mkdir /etc/systemd/system/mytimer.timer.d
 cyber7ron@htb[/htb]$ sudo vim /etc/systemd/system/mytimer.timer
 ```
 2. create a script that configure the timer. the script must contain `Unit`, `Timer`, and `Install` options.  
-> [!info]  Unit = description for the timer
+> Unit = description for the timer
 
-> [!info]  Timer = when to start the timer and when to activate it
+> Timer = when to start the timer and when to activate it
 
-> [!info] Install = where to install the time
+> Install = where to install the time
+
 
 ==Mytimer.timer== 
 
-```txt
+```
 [Unit]
 Description=My Timer
 
@@ -194,7 +201,7 @@ cyber7ron@htb[/htb]$ sudo vim /etc/systemd/system/mytimer.service
 
 Here we set a description and specify the full path to the script we want to run. The "multi-user.target" is the unit system that is activated when starting a normal multi-user mode.
 
-```txt
+```
 [Unit]
 Description=My Service
 
@@ -308,10 +315,12 @@ The fourth task, `backups`, is to be executed every Sunday at midnight. This is
 - we can download files from FTP or HTTP servers directly from the terminal.
 
 #### Python 3
-- python also used to transfer data. 
+- python also used to transfer data.
+
 ```python3
-#start python3 server
+
 python3 -m http.server
+
 ```
 
 ***
@@ -430,43 +439,53 @@ lsof | grep cyber7ron
 - Important and crucial aspect of memory management.
 - It ensure that system runs smoothly , even when the available physical memory is depleted.
 - When the system runs out of physical memory, the kernel transfers inactive pages of memory to the swap space, freeing up physical memory for use by active processes. This process is known as swapping.
-- 
 
 ***
 ***
+
 ## Containerization
 - Containerization is a process of packaging and running applications in isolated environment. eg : container, virtual machine or serverless environment.
 - On linux Docker,Docker Compose , and linux container make this process possible.
 
-To know about container please check [[containers]] .
 #### Docker
+
 - Docker is open-source platform for automating the deployment of applications as self-contained units called `containers`.
 
-**Installing Docker-Engine** 
+**Installing Docker-Engine**
+
 - We can use following script to install docker it on ubuntu.
-```bash
+
+```
 #!/bin/bash
 
 # Preparation
 sudo apt update -y
+
 sudo apt install ca-certificates curl gnupg lsb-release -y
+
 sudo mkdir -m 0755 -p /etc/apt/keyrings
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Install Docker Engine
+
 sudo apt update -y
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 # Add user htb-student to the Docker group
+
 sudo usermod -aG docker htb-student
 echo '[!] You need to log out and log back in for the group changes to take effect.'
 
 # Test Docker installation
+
 docker run hello-world
 ```
 
 - Docker engine and specific docker images are needed to run a container. (these can be obtained from the [Docker Hub](https://hub.docker.com/))
+
 - The Docker Hub is a cloud-based registry for software repositories or a library for Docker images. 
 - It is divided into a `public` and a `private` area. 
 	- The public area allows users to upload and share images with the community. 
@@ -483,6 +502,7 @@ docker run hello-world
 - Docker will create a container based on your image and start running your application inside it.
 
 **Managing Docker:** 
+
 ```
 	- You can manage your Docker containers using various commands.
     - `docker ps` - Lists all running containers.
@@ -493,17 +513,19 @@ docker run hello-world
     - `docker logs <container_id>` - Displays the logs of a container.
 ```
 
-For More Info Check [[Docker]] 
 #### Linux Containers
+
 - `LXC` is a virtualization technology that allows multiple isolated linux system to run on a single host.
 - it uses resource isolation features such as `cgroups` and `namespace` .
 
 **Install LXC**
+
 ```shell-session
 cyber7ron@htb[/htb]$ sudo apt-get install lxc lxc-utils -y
 ```
 
 **Creating an LXC Container**
+
 ```shell-session
 cyber7ron@htb[/htb]$ sudo lxc-create -n linuxcontainer -t ubuntu
 ```
@@ -522,6 +544,7 @@ create ubuntu container named `linuxcontainer`.
 | `lxc-config -n <container name> -s security`  | Manage container security settings                             |
 | `lxc-attach -n <container>`                   | Connect to a container.                                        |
 | `lxc-attach -n <container> -f /path/to/share` | Connect to a container and share a specific directory or file. |
+
 Here are 9 optional exercises to practice LXC:
 
 - [ ]  Install LXC on your machine and create your first container.
