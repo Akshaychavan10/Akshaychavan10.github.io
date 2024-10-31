@@ -15,6 +15,7 @@ description: Difference Between Solaris and Linux.
 - designed to handle large amouts of data and provide reliable and secure services.
 
 ***
+
 ## Difference between Linux and Solaris
 
 - source code is not public in solaris. in constrat most linux distribution are open-source.

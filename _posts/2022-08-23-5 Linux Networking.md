@@ -13,6 +13,7 @@ description: Network configuration on Linux for penetration testers, covering in
 -  we should learn how to configure network interfaces.
 	- this includes IP addresses, configuring network devices such as routers and switches, and setting up network protocols.
 	- Also Its important to understand networking protocol such as TCP/IP, DNS, DHCP, and FTP.
+
 #### Configuring Network Interfaces 
 
 - we can configure local network interfaces using `ifconfig` or the `ip` cmd.
@@ -38,6 +39,7 @@ cyber7ron@htb[/htb]$ sudo ifconfig eth0 netmask 255.255.255.0
 ```
 
 **Assign the route to an interface**
+
 - When we want to set the default gateway for a network interface, we can use the `route` command with the `add` option.
 - his allows us to specify the gateway's IP address and the network interface to which it should be applied
 - *what is default gateway* 
@@ -51,9 +53,11 @@ cyber7ron@htb[/htb]$ sudo route add default gw 192.168.1.1 eth0
 ```
 
 **Editing DNS Settings** 
+
 - Its neccessary to set Domain Name System server to ensure proper network functionality.
 - The `/etc/resolv.conf` file is a plain text file containing the system's DNS information.
 -  any changes made to this file will only apply to the current session and must be updated if the system is restarted or the network configuration is changed
+
 ```shell-session
 cyber7ron@htb[/htb]$ sudo vim /etc/resolv.conf
 ```
@@ -69,7 +73,7 @@ cyber7ron@htb[/htb]$ sudo vim /etc/network/interfaces
 
 - We can add the network configuration settings to the file like this
 
-```txt
+```
 auto eth0
 iface eth0 inet static
   address 192.168.1.2
@@ -84,13 +88,6 @@ iface eth0 inet static
 cyber7ron@htb[/htb]$ sudo systemctl restart networking
 ```
 
-
-
-
-
-
-
-
 #### Network Access Control 
 
 - NAC is a security system that ensures that only authorized and compliant devices are granted access to the network, preventing unauthorized access, data breaches, and other security threats.
@@ -98,22 +95,24 @@ cyber7ron@htb[/htb]$ sudo systemctl restart networking
 	- Discretionary access control (DAC)
 	- Mandatory access control (MAC)
 	- Role-based access control (RBAC)
+
 **Discretionary Access Control** :
+
 - owner of the  resource can decide who has access to their resources and what actions they are authorized to perform. These permissions can be set for reading, writing, executing, or deleting the resource
 
 **Mandatory Access Control** :
+
 - Each resource is assigned a security label that identifies its security level, and each user or process is assigned a security clearance that identifies its security level. 
 - Access to a resource is only granted if the user's or process's security level is equal to or greater than the security level of the resource. 
 - MAC is often used in operating systems and applications that require a high level of security, such as military or government systems, financial systems
 
 **Role-based Access Control** :
+
 - RBAC assigns permissions to users based on their roles within an organization.
--  Users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions that determine the actions they can perform.
-
-
-
+- Users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions that determine the actions they can perform.
 
 #### Monitoring
+
 - Network monitoring involves capturing, analyzing, and interpreting network traffic
 -  where we use several tools for network monitoring on Linux systems like Ubuntu and Windows systems, like Wireshark, tshark, and Tcpdump.
 - For More info take look at `Intro to network traffic analysis` Module in this vault.
@@ -159,9 +158,11 @@ tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
 
 
 #### Hardening
+
 - security mechanisms such as SELinux, AppArmor, and TCP wrappers are used to secure linux in organization.  they provide some extra security to linux systems.
 
 **SELinux** 
+
 - SELinux is a security feature built into the Linux kernel that provides a flexible Mandatory Access Control (MAC) system.
 - security policies based on security labels assigned to files, processes, and network resources.
 **AppArmor** :
@@ -170,6 +171,7 @@ tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
 - These profiles define the permissions granted to specific applications, restricting their access to files, directories, and network resources
 **TCP Wrappers** 
 - TCP Wrappers is a security feature for Unix-like operating systems that controls access to network services based on the IP address of the client attempting to connect.
+
 #### Setting up
 
 highly recommend dedicating time to learning about configuring important security measures such as `SELinux`, `AppArmor`, and `TCP wrappers` on your own.
@@ -197,6 +199,7 @@ highly recommend dedicating time to learning about configuring important securit
 | 10. | Configure TCP wrappers to allow access to a specific network service from a range of IP addresses. |
 
 ***
+
 ## Remote Desktop Protocols in Linux
 
 - Desktop protocol used in windows , linux and macos to provide graphical remote access to a system.

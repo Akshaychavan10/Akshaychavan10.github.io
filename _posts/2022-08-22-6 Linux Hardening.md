@@ -10,6 +10,7 @@ description: This guide emphasizes keeping Linux systems updated and explores ad
 ## Linux security
 
 - keep os up to date.
+
 ```bash
 cyber7ron@htb[/htb]$ apt update && apt dist-upgrade
 ```
@@ -17,6 +18,7 @@ cyber7ron@htb[/htb]$ apt update && apt dist-upgrade
 - An option for further locking down Linux systems is `Security-Enhanced Linux` (`SELinux`) or `AppArmor`.
 
 **TCP Wrappers**
+
 - is a security mechanism used in Linux systems that allows the system administrator to control which services are allowed access to the system.
 - It check IP address of client and if ip is in the tcp wrappers config file it will give access to client.
 - TCP Wrappers use the following configuration files :
@@ -50,9 +52,10 @@ sshd : 10.129.22.22
 ftpd : 10.129.22.0/24
 ```
 
-> [!info] It is important to remember that the order of the rules in the files is important. The first rule that matches the requested service and host is the one that will be applied. It is also important to note that TCP wrappers are not a replacement for a firewall, as they are limited by the fact that they can only control access to services and not to ports.
+> It is important to remember that the order of the rules in the files is important. The first rule that matches the requested service and host is the one that will be applied. It is also important to note that TCP wrappers are not a replacement for a firewall, as they are limited by the fact that they can only control access to services and not to ports.
 
 ***
+
 ## Firewall Setup
 
 - Firewall provide security by controlling and monitoring network traffic between different network segment. eg : internal , external or different network zones.
@@ -66,6 +69,7 @@ ftpd : 10.129.22.0/24
 	- `nftables` modern syntax and improvised performance over iptables. but the syntax of nftables rules not compatible with iptables so migration to nftables requires some efforts.
 	- `UFW` "Uncomplicated Firewall" ,  UFW is built on top of the iptables framework like nftables and provides an easier way to manage firewall rules.
 	- `FirewallD` used to manage complex firewall configurations, and it supports a rich set of rules for filtering network traffic and can be used to create custom firewall zones and services
+
 - Main Component of iptables is 
 
 | **Component** | **Description**                                                                                                                                                              |
@@ -75,9 +79,10 @@ ftpd : 10.129.22.0/24
 | `Rules`       | Rules define the criteria for filtering network traffic and the actions to take for packets that match the criteria.                                                         |
 | `Matches`     | Matches are used to match specific criteria for filtering network traffic, such as source or destination IP addresses, ports, protocols, and more.                           |
 | `Targets`     | Targets specify the action for packets that match a specific rule. For example, targets can be used to accept, drop, or reject packets or modify the packets in another way. |
+
 **tables** :
 
- - tables are used to organize and categorize firewall rules. Each table is responsible for performing a specific set of tasks.
+- tables are used to organize and categorize firewall rules. Each table is responsible for performing a specific set of tasks.
 
 |**Table Name**|**Description**|**Built-in Chains**|
 |---|---|---|
@@ -102,6 +107,7 @@ ftpd : 10.129.22.0/24
 
 
 **Rules and Targets** 
+
 - Iptables rules are used to define the criteria for filtering network traffic and the actions to take for packets that match the criteria.
 - Rules are added to chains using the `-A` option followed by the chain name
 
@@ -118,6 +124,7 @@ Some of the common targets used in iptables rules include the following:
 |`MASQUERADE`|Similar to SNAT but used when the source IP address is not fixed, such as in a dynamic IP address scenario|
 |`REDIRECT`|Redirects packets to another port or IP address|
 |`MARK`|Adds or modifies the Netfilter mark value of the packet, which can be used for advanced routing or other purposes|
+
 EG: we want to add a new entry to the INPUT chain that allows incoming TCP traffic on port 22 (SSH) to be accepted. The command for that would look like the following:
 
 ```shell-session
@@ -125,6 +132,7 @@ cyber7ron@htb[/htb]$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 ```
 
 **Matches** 
+
 - specify the criteria that determine whether a firewall rule should be applied to a particular packetr or connection.
 - Matches are used to match specific characteristics of network traffic, such as the source or destination IP address, protocol, port number, and more.
 
@@ -145,6 +153,7 @@ cyber7ron@htb[/htb]$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 |`-m mark`|Matches packets based on their Netfilter mark value|
 |`-m mac`|Matches packets based on their MAC address|
 |`-m iprange`|Matches packets based on a range of IP addresses|
+
 #### ToDo
 
 |     |                                                                                                              |
@@ -159,10 +168,13 @@ cyber7ron@htb[/htb]$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 | 8.  | Forward traffic to a specific chain.                                                                         |
 | 9.  | Delete a specific rule.                                                                                      |
 | 10. | List all existing rules.                                                                                     |
+
 ***
+
 ## System Logs and Monitoring
 
 - there are several different types of system logs on linux.
+
 1. kernel logs
 2. system logs
 3. authentication logs
@@ -170,26 +182,31 @@ cyber7ron@htb[/htb]$ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 5. security logs
 
 #### kernel logs
+
 - contain information about system kernel, including hw drivers , system calls and kernel events.
 - stored in `/var/log/kern.log` file.
 - provide information on vulnerable or outdated drivers , also provide info about system crashesh,  and other events.
 
 #### System logs
+
 - contain information about system-level events, such as service start and stops, login attempts and system reboots.
 - stored in `/var/log/syslog`
 - In addition, we can use the `syslog` to identify potential issues that could impact the availability or performance of the system, such as failed service starts or system reboots.
 
 #### Authentication logs
+
 - These logs contain information about user authentication attempts, including successful and failed attempts. 
 - They are stored in the `/var/log/auth.log` file. 
 - It is important to note that while the `/var/log/syslog` file may contain similar login information, the `/var/log/auth.log` file specifically focuses on user authentication attempts, making it a more valuable resource
 
 #### Application logs
+
 - These logs contain information about the activities of specific applications running on the system. 
 - They are often stored in their own files, such as `/var/log/apache2/error.log` for the Apache web server or `/var/log/mysql/error.log` for the MySQL database server. 
 - These logs are particularly important when we are targeting specific applications, such as web servers or databases,
 
 #### Security logs
+
 - These security logs and their events are often recorded in a variety of log files, depending on the specific security application or tool in use. For example, the Fail2ban application records failed login attempts in the `/var/log/fail2ban.log` file, while the UFW firewall records activity in the `/var/log/ufw.log` file. 
 - Other security-related events, such as changes to system files or settings, may be recorded in more general system logs such as `/var/log/syslog` or `/var/log/auth.log`.
 
