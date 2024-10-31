@@ -1,7 +1,7 @@
 ---
 title: First_Post
 date: 2024-10-27 11:11:11 +/-TTTT
-categories: [Notes, Windows, Basics]
+categories: [Notes, Windows]
 tags: [buffer overflow, web exploitation] 
 author: 1  
 description: This is my first post   
